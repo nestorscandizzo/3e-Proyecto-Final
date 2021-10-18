@@ -1,0 +1,100 @@
+/* COLOR---VARIABLES */
+$color-green: #002116ff;
+$color-rusted: #902923ff;
+$color-cream: #eef4edff;
+$color-gold: #d1ac00ff;
+$color-turquoise: #109194ff;
+$color-paragraph: rgb(216, 216, 216);
+
+body {
+  background-image: url(../images/pattern-cartographer.png);
+  background-repeat: repeat;
+}
+
+.grid-container {
+  margin-inline: auto;
+  width: min(90%, 70.5rem);
+  height: auto;
+  margin-top: 15vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 2vw;
+
+  p {
+    color: $color-paragraph;
+    text-align: left;
+  }
+
+  h1 {
+    font-weight: 700;
+    color: $color-cream;
+    text-align: center;
+  }
+
+  .grid-container--foto {
+    border: 0.5rem solid $color-cream;
+    width: 100%;
+    animation: from-left 1.75s ease;
+  }
+
+  .grid-container__foto-2 {
+    margin-bottom: 8vh;
+  }
+}
+
+/* Animacion images */
+@keyframes from-left {
+  0% {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+/* Medias Queries Agua GRID */
+
+@media screen and (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100% 100% 100%;
+    grid-template-areas:
+      "grid-container__titulo grid-container__foto-1"
+      "grid-container__parrafo-1 grid-container__parrafo-2"
+      "grid-container__foto-2 grid-container__foto-2";
+    grid-gap: 2vw;
+
+    h1 {
+      font-size: 5rem;
+      font-weight: 800;
+      text-align: left;
+    }
+  }
+
+  .grid-container__titulo {
+    grid-area: "grid-container__titulo";
+  }
+
+  .grid-container__foto-1 {
+    grid-area: grid-container__foto-1;
+    object-fit: contain;
+    overflow: hidden;
+  }
+
+  .grid-container__parrafo-1 {
+    grid-area: grid-container__parrafo-1;
+  }
+
+  .grid-container__parrafo-2 {
+    grid-area: grid-container__parrafo-2;
+  }
+
+  .grid-container__foto-2 {
+    grid-area: grid-container__foto-2;
+    object-fit: contain;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,120 @@
+// EXTEND //
+%img {
+  width: 100%;
+  height: auto;
+  height: 100%;
+  cursor: pointer;
+}
+
+// MIXIN //
+@mixin title($size, $weight, $lead) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lead;
+  color: $color-rusted;
+}
+
+/* COLORS */
+$color-green: #002116ff;
+$color-rusted: #902923ff;
+$color-cream: #eef4edff;
+$color-gold: #d1ac00ff;
+$color-turquoise: #109194ff;
+$color-paragraph: rgb(94, 94, 94);
+
+/*--- BOOTSTRAP COL-MD-12 CLASS --- */
+.col-md-12 {
+  padding-right: 0px;
+  padding-left: 0px;
+  // margin-top: 10vh;
+  background-image: url(../images/pattern-cartographer.png);
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.container-total {
+  padding: 50px+50 0 30px 0;
+}
+
+/*--- CARDS --- */
+.card {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin-bottom: 80px;
+  border-radius: 6px;
+  color: rgba(0, 0, 0, 0.87);
+  background: $color-cream;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+
+  .card__image {
+    animation: from-top 1.5s ease;
+    height: 60%;
+    position: relative;
+    overflow: hidden;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: -30px;
+    border-radius: 6px;
+    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56),
+      0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    transition: 0.5s ease all;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    img {
+      @extend %img;
+      filter: grayscale(35+35%);
+
+      &:hover {
+        filter: grayscale(0%);
+      }
+    }
+  }
+}
+
+/* imag animation */
+@keyframes from-top {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.text-container {
+  margin-bottom: 0px;
+  padding: 15px 30px;
+
+  &__activity {
+    color: $color-gold;
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  &__title a {
+    @include title(1.75rem, 600, 2.2rem);
+
+    &:hover {
+      color: $color-green;
+    }
+  }
+
+  &__description {
+    color: $color-paragraph;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: left;
+    margin-top: 5vh;
+  }
+}

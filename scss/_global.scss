@@ -1,0 +1,49 @@
+$color-rusted: #902923ff;
+$color-gold: #d1ac00ff;
+$color-cream: #eef4edff;
+
+/*RESET DE ESTILOS*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* tamaño logos */
+.logo {
+  height: 6vh;
+  transition: 0.5s ease;
+  margin: 1vh;
+
+  &:hover {
+    transform: scale(1.1);
+    transform-origin: -10% 10%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+/* Iconos Redes */
+.iconos-redes {
+  font-size: 1.5rem;
+  margin-right: 2vw;
+
+  & a {
+    margin-right: 1vw;
+    color: $color-cream;
+    transition: all 1s;
+
+    &:hover {
+      color: $color-gold;
+      font-size: 2rem;
+    }
+  }
+}
+
+//NAV Active link color//
+
+.active-page {
+  color: $color-gold;
+}
