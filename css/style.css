@@ -451,4 +451,15 @@ body {
   margin-top: 5vh;
 }
 
+.Error-404 {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Error-404 a {
+  font-size: 5rem;
+}
+
 /*# sourceMappingURL=style.css.map */
