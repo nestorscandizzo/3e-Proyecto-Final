@@ -70,7 +70,7 @@ body {
 .nota-ppal {
   background-image: url(../images/pattern-cartographer.png);
   background-repeat: repeat;
-  margin-top: 5vh +6;
+  margin-top: 2vh +1;
 }
 
 .container-sections {
@@ -121,6 +121,10 @@ body {
   .container-sections__flex > * + * {
     margin-left: 2rem;
   }
+
+  // .nota-ppal {
+  //   margin-top: 1vh;
+  // }
 
   body p {
     text-align: left;

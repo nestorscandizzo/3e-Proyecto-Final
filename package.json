@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/nestorscandizzo/3e-Proyecto-Final/issues"
   },
-  "homepage": "https://github.com/nestorscandizzo/3e-Proyecto-Final#readme"
+  "homepage": "https://github.com/nestorscandizzo/3e-Proyecto-Final#readme",
+  "keywords": [
+    "html",
+    "css",
+    "sass",
+    "bootstrap"
+  ]
 }
