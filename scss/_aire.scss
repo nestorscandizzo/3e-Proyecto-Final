@@ -6,6 +6,12 @@ $color-gold: #d1ac00ff;
 $color-turquoise: #109194ff;
 $color-paragraph: rgb(216, 216, 216);
 
+.subtitulo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
 /* --- GALLERY --- */
 .gallery {
   width: min(90%, 70.5rem);
@@ -121,5 +127,10 @@ $color-paragraph: rgb(216, 216, 216);
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "grid-cont__p1 grid-cont__p2";
     grid-gap: 2vw;
+  }
+
+  .subtitulo {
+    font-size: 2rem;
+    font-weight: 600;
   }
 }

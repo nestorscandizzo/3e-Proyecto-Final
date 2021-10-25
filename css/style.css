@@ -452,6 +452,12 @@ body {
 }
 
 /* COLOR---VARIABLES */
+.subtitulo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
 /* --- GALLERY --- */
 .gallery {
   width: min(90%, 70.5rem);
@@ -564,6 +570,11 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "grid-cont__p1 grid-cont__p2";
     grid-gap: 2vw;
+  }
+
+  .subtitulo {
+    font-size: 2rem;
+    font-weight: 600;
   }
 }
 .Error-404 {
