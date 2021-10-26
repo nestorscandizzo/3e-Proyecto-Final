@@ -54,6 +54,67 @@ $color-paragraph: rgb(216, 216, 216);
   padding: 40px 30px;
   background: $color-cream;
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.9);
+  position: relative;
+  perspective: 2700px;
+
+  .cover {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 50%;
+    z-index: 98;
+    transition: all 1s ease;
+    transform-origin: left;
+    transform-style: preserve-3d;
+
+    &:before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: rgb(230, 207, 146);
+      opacity: 0.6;
+      z-index: 100;
+    }
+
+    img {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      z-index: 12;
+      // backface-visibility: hidden;
+    }
+
+    .back .back_img {
+      transform: rotateY(180deg);
+    }
+
+    .text {
+      position: absolute;
+      z-index: 111;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .text-1 {
+        font-size: 3rem;
+        font-weight: 600;
+        color: $color-green;
+        text-align: center;
+        line-height: 3.5rem;
+        backface-visibility: hidden;
+      }
+    }
+  }
+
+  #flip:checked ~ .cover {
+    transform: rotateY(-180deg);
+  }
 
   form {
     height: 100%;
@@ -106,13 +167,25 @@ $color-paragraph: rgb(216, 216, 216);
       .button {
         color: $color-cream;
         background: $color-cream;
+        margin-top: 40px;
 
         input {
           color: $color-cream;
           background-color: $color-green;
           border-radius: 8px;
           padding: 0;
+          cursor: pointer;
+          transition: all 0.4s ease;
+
+          &:hover {
+            background-color: #003d29;
+          }
         }
+      }
+
+      .CTA-text {
+        text-align: center;
+        margin-top: 25px;
       }
     }
 
@@ -139,6 +212,30 @@ $color-paragraph: rgb(216, 216, 216);
 
     .input-boxes {
       margin-top: 30px;
+    }
+
+    .text {
+      font-size: 1rem;
+      font-weight: 500;
+      color: $color-green;
+
+      a {
+        text-decoration: none;
+        color: $color-rusted;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      label {
+        color: $color-rusted;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
 }

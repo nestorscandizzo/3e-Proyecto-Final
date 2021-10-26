@@ -591,6 +591,59 @@ body {
   padding: 40px 30px;
   background: #eef4edff;
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.9);
+  position: relative;
+  perspective: 2700px;
+}
+.container-reg .cover {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 50%;
+  z-index: 98;
+  transition: all 1s ease;
+  transform-origin: left;
+  transform-style: preserve-3d;
+}
+.container-reg .cover:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #e6cf92;
+  opacity: 0.6;
+  z-index: 100;
+}
+.container-reg .cover img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 12;
+}
+.container-reg .cover .back .back_img {
+  transform: rotateY(180deg);
+}
+.container-reg .cover .text {
+  position: absolute;
+  z-index: 111;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container-reg .cover .text .text-1 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #002116ff;
+  text-align: center;
+  line-height: 3.5rem;
+  backface-visibility: hidden;
+}
+.container-reg #flip:checked ~ .cover {
+  transform: rotateY(-180deg);
 }
 .container-reg form {
   height: 100%;
@@ -643,6 +696,7 @@ body {
 .container-reg .form-content .signup-form .button {
   color: #eef4edff;
   background: #eef4edff;
+  margin-top: 40px;
 }
 .container-reg .form-content .login-form .button input,
 .container-reg .form-content .signup-form .button input {
@@ -650,6 +704,17 @@ body {
   background-color: #002116ff;
   border-radius: 8px;
   padding: 0;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.container-reg .form-content .login-form .button input:hover,
+.container-reg .form-content .signup-form .button input:hover {
+  background-color: #003d29;
+}
+.container-reg .form-content .login-form .CTA-text,
+.container-reg .form-content .signup-form .CTA-text {
+  text-align: center;
+  margin-top: 25px;
 }
 .container-reg .form-content .titles {
   position: relative;
@@ -671,6 +736,25 @@ body {
 }
 .container-reg .form-content .input-boxes {
   margin-top: 30px;
+}
+.container-reg .form-content .text {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #002116ff;
+}
+.container-reg .form-content .text a {
+  text-decoration: none;
+  color: #902923ff;
+}
+.container-reg .form-content .text a:hover {
+  text-decoration: underline;
+}
+.container-reg .form-content .text label {
+  color: #902923ff;
+  cursor: pointer;
+}
+.container-reg .form-content .text label:hover {
+  text-decoration: underline;
 }
 
 .Error-404 {
