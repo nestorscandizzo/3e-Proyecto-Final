@@ -1,0 +1,144 @@
+$color-green: #002116ff;
+$color-rusted: #902923ff;
+$color-cream: #eef4edff;
+$color-gold: #d1ac00ff;
+$color-turquoise: #109194ff;
+$color-paragraph: rgb(216, 216, 216);
+
+.total-cont {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+// .container-reg {
+//   max-width: 850px;
+//   width: 100%;
+//   padding: 40px 30px;
+//   background: $color-cream;
+//   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.9);
+// }
+
+// .container-reg form {
+//   height: 100%;
+//   width: 100%;
+//   background: $color-cream;
+// }
+
+// .container-reg .form-content {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+// }
+
+// .form-content .login-form,
+// .form-content .signup-form {
+//   width: calc(100% / 2 - 25px);
+// }
+
+// form .form-content .titles {
+//   font-size: 1.5rem;
+//   font-weight: 500;
+//   color: $color-green;
+// }
+
+// form .form-content .input-boxes {
+//   margin-top: 30px;
+// }
+
+.container-reg {
+  max-width: 850px;
+  width: 100%;
+  padding: 40px 30px;
+  background: $color-cream;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.9);
+
+  form {
+    height: 100%;
+    width: 100%;
+    background: $color-cream;
+  }
+
+  .form-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .login-form,
+    .signup-form {
+      width: calc(100% / 2 - 25px);
+
+      .input-box {
+        display: flex;
+        align-items: center;
+        height: 50px;
+        width: 100%;
+        margin: 10px 0;
+        position: relative;
+
+        input {
+          height: 100%;
+          width: 100%;
+          outline: none;
+          border: none;
+          padding: 0 30px;
+          font-size: 1rem;
+          font-weight: 500;
+          background-color: $color-cream;
+          border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+          transition: all 0.3s ease;
+
+          &:focus,
+          &:valid {
+            border-color: $color-green;
+          }
+        }
+
+        i {
+          position: absolute;
+          color: $color-gold;
+          font-size: 1rem;
+        }
+      }
+
+      .button {
+        color: $color-cream;
+        background: $color-cream;
+
+        input {
+          color: $color-cream;
+          background-color: $color-green;
+          border-radius: 8px;
+          padding: 0;
+        }
+      }
+    }
+
+    .titles {
+      position: relative;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: $color-green;
+    }
+
+    .titles:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 3px;
+      width: 25px;
+      background: $color-gold;
+    }
+
+    .signup-form .titles:before {
+      width: 20px;
+    }
+
+    .input-boxes {
+      margin-top: 30px;
+    }
+  }
+}

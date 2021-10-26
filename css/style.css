@@ -577,6 +577,102 @@ body {
     font-weight: 600;
   }
 }
+.total-cont {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.container-reg {
+  max-width: 850px;
+  width: 100%;
+  padding: 40px 30px;
+  background: #eef4edff;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.9);
+}
+.container-reg form {
+  height: 100%;
+  width: 100%;
+  background: #eef4edff;
+}
+.container-reg .form-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container-reg .form-content .login-form,
+.container-reg .form-content .signup-form {
+  width: calc(50% - 25px);
+}
+.container-reg .form-content .login-form .input-box,
+.container-reg .form-content .signup-form .input-box {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  margin: 10px 0;
+  position: relative;
+}
+.container-reg .form-content .login-form .input-box input,
+.container-reg .form-content .signup-form .input-box input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 0 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #eef4edff;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+.container-reg .form-content .login-form .input-box input:focus, .container-reg .form-content .login-form .input-box input:valid,
+.container-reg .form-content .signup-form .input-box input:focus,
+.container-reg .form-content .signup-form .input-box input:valid {
+  border-color: #002116ff;
+}
+.container-reg .form-content .login-form .input-box i,
+.container-reg .form-content .signup-form .input-box i {
+  position: absolute;
+  color: #d1ac00ff;
+  font-size: 1rem;
+}
+.container-reg .form-content .login-form .button,
+.container-reg .form-content .signup-form .button {
+  color: #eef4edff;
+  background: #eef4edff;
+}
+.container-reg .form-content .login-form .button input,
+.container-reg .form-content .signup-form .button input {
+  color: #eef4edff;
+  background-color: #002116ff;
+  border-radius: 8px;
+  padding: 0;
+}
+.container-reg .form-content .titles {
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #002116ff;
+}
+.container-reg .form-content .titles:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 25px;
+  background: #d1ac00ff;
+}
+.container-reg .form-content .signup-form .titles:before {
+  width: 20px;
+}
+.container-reg .form-content .input-boxes {
+  margin-top: 30px;
+}
+
 .Error-404 {
   height: 100vh;
   display: flex;
