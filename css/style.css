@@ -126,7 +126,7 @@ body p {
     transform: translateY(0px);
   }
 }
-/* Medias Queries CONTENIDO */
+/* Medias Queries */
 @media (min-width: 800px) {
   .container-sections__flex {
     flex-direction: row;
@@ -577,6 +577,12 @@ body {
     font-weight: 600;
   }
 }
+.subtitle-reg {
+  text-align: center;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
 .total-cont {
   min-height: 100vh;
   display: flex;
@@ -611,8 +617,18 @@ body {
   height: 100%;
   width: 100%;
   background: #e6cf92;
-  opacity: 0.6;
+  opacity: 0.4;
   z-index: 100;
+}
+.container-reg .cover:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #e6cf92;
+  opacity: 0.4;
+  z-index: 100;
+  transform: rotateY(180deg);
 }
 .container-reg .cover img {
   position: absolute;
@@ -621,7 +637,14 @@ body {
   object-fit: cover;
   z-index: 12;
 }
+.container-reg .cover .front img {
+  backface-visibility: hidden;
+  z-index: 50;
+}
 .container-reg .cover .back .back_img {
+  transform: rotateY(180deg);
+}
+.container-reg .cover .back .text-2 {
   transform: rotateY(180deg);
 }
 .container-reg .cover .text {
@@ -634,7 +657,8 @@ body {
   align-items: center;
   justify-content: center;
 }
-.container-reg .cover .text .text-1 {
+.container-reg .cover .text .text-1,
+.container-reg .cover .text .text-2 {
   font-size: 3rem;
   font-weight: 600;
   color: #002116ff;
@@ -644,6 +668,9 @@ body {
 }
 .container-reg #flip:checked ~ .cover {
   transform: rotateY(-180deg);
+}
+.container-reg #flip {
+  display: none;
 }
 .container-reg form {
   height: 100%;
@@ -757,6 +784,38 @@ body {
   text-decoration: underline;
 }
 
+@media (max-width: 730px) {
+  .container-reg .cover {
+    display: none;
+  }
+
+  .container-reg .form-content .login-form,
+.container-reg .form-content .signup-form {
+    width: 100%;
+  }
+
+  .form-content .signup-form {
+    display: none;
+  }
+
+  .container-reg #flip:checked ~ form .signup-form {
+    display: block;
+  }
+
+  .container-reg #flip:checked ~ form .login-form {
+    display: none;
+  }
+
+  .title-reg {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  .subtitle-reg {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+}
 .Error-404 {
   height: 100vh;
   display: flex;
