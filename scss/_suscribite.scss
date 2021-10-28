@@ -101,6 +101,7 @@ $color-paragraph: rgb(216, 216, 216);
         text-align: center;
         line-height: 3.5rem;
         backface-visibility: hidden;
+        transform-style: preserve-3d;
       }
     }
   }
