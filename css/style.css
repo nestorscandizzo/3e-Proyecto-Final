@@ -192,6 +192,12 @@ body p {
   color: #002116ff !important;
 }
 
+.nav-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .nav-link {
   color: #eef4edff;
   text-transform: uppercase;
