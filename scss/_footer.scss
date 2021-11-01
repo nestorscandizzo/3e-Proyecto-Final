@@ -1,4 +1,10 @@
-/* FOOTER */
+/* COLOR---VARIABLES */
+$color-green: #002116ff;
+$color-rusted: #902923ff;
+$color-cream: #eef4edff;
+$color-gold: #d1ac00ff;
+$color-turquoise: #109194ff;
+$color-paragraph: rgb(216, 216, 216);
 
 footer {
   color: #eef4edff;
@@ -78,4 +84,12 @@ footer {
   list-style: none;
   margin-top: 30px;
   margin-bottom: 0vh;
+}
+
+.nav-link-active {
+  background-color: $color-gold;
+  border-radius: 15px;
+  padding: 1px 10px;
+  color: $color-green !important;
+  text-align: center;
 }
