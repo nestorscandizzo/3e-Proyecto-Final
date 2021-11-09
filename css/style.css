@@ -345,6 +345,7 @@ body {
     grid-template-rows: 100% 100% 100%;
     grid-template-areas: "grid-container__titulo grid-container__foto-1" "grid-container__parrafo-1 grid-container__parrafo-2" "grid-container__foto-2 grid-container__foto-2";
     grid-gap: 2vw;
+    margin-top: 20vh;
   }
   .grid-container h1 {
     font-size: 5rem;
