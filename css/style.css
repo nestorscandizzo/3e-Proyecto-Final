@@ -313,10 +313,11 @@ body {
   color: #d8d8d8;
   text-align: left;
 }
-.grid-container h1 {
+.grid-container .grid-container__titulo h1 {
   font-weight: 700;
   color: #eef4edff;
   text-align: center;
+  margin: 10vh 0 3vh 0;
 }
 .grid-container .grid-container--foto {
   border: 0.5rem solid #eef4edff;

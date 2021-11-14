@@ -3,7 +3,6 @@ $color-green: #002116ff;
 $color-rusted: #902923ff;
 $color-cream: #eef4edff;
 $color-gold: #d1ac00ff;
-$color-turquoise: #109194ff;
 $color-paragraph: rgb(216, 216, 216);
 
 body {
@@ -26,10 +25,11 @@ body {
     text-align: left;
   }
 
-  h1 {
+  .grid-container__titulo h1 {
     font-weight: 700;
     color: $color-cream;
     text-align: center;
+    margin: 10vh 0 3vh 0;
   }
 
   .grid-container--foto {
