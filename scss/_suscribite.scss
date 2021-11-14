@@ -2,7 +2,6 @@ $color-green: #002116ff;
 $color-rusted: #902923ff;
 $color-cream: #eef4edff;
 $color-gold: #d1ac00ff;
-$color-turquoise: #109194ff;
 $color-paragraph: rgb(216, 216, 216);
 
 .subtitle-reg {
@@ -12,11 +11,23 @@ $color-paragraph: rgb(216, 216, 216);
 }
 
 .total-cont {
-  min-height: 100vh;
+  max-height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
   padding: 30px;
+  animation: from-bottom 1.5s ease;
+}
+
+/* Animacion total-cont */
+@keyframes from-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
 .container-reg {

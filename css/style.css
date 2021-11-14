@@ -604,13 +604,24 @@ body {
 }
 
 .total-cont {
-  min-height: 100vh;
+  max-height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
   padding: 30px;
+  animation: from-bottom 1.5s ease;
 }
 
+/* Animacion total-cont */
+@keyframes from-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 .container-reg {
   max-width: 850px;
   width: 100%;
