@@ -21,12 +21,15 @@
     <meta name="robots" content="index,follow" />
 
     <!-- Bootstrap -->
-    <link
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
-    />
+    /> -->
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="../../css/style.css" />
@@ -58,7 +61,7 @@
   <body>
     <!-- HEADER -->
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top nav-padding">
         <a class="navbar-brand" href="../../index.html"
           ><img
             src="../../images/logo-3e-dorado.svg"
@@ -114,66 +117,51 @@
       <h2 class="subtitulo">Fotógrafo especialista en Parapente</h2>
 
       <!-- Galeria de Imagenes -->
-      <div class="gallery">
-        <input type="radio" name="images" id="i1" />
-        <input type="radio" name="images" id="i2" />
-        <input type="radio" name="images" id="i3" />
-        <input type="radio" name="images" id="i4" />
-        <input type="radio" name="images" id="i5" />
-
-        <div class="slide_img" id="one">
-          <img
-            src="../../images/parapente-01.jpg"
-            alt="Fotografía de parepente"
-          />
-          <label for="i5" class="pre"></label>
-          <label for="i2" class="next"></label>
-        </div>
-
-        <div class="slide_img" id="two">
-          <img
-            src="../../images/parapente-07.jpg"
-            alt="Fotografía de parepente"
-          />
-          <label for="i1" class="pre"></label>
-          <label for="i3" class="next"></label>
-        </div>
-
-        <div class="slide_img" id="three">
-          <img
-            src="../../images/parapente-03.jpg"
-            alt="Fotografía de parepente"
-          />
-          <label for="i2" class="pre"></label>
-          <label for="i4" class="next"></label>
-        </div>
-
-        <div class="slide_img" id="four">
-          <img
-            src="../../images/parapente-04.jpg"
-            alt="Fotografía de parepente"
-          />
-          <label for="i3" class="pre"></label>
-          <label for="i5" class="next"></label>
-        </div>
-
-        <div class="slide_img" id="five">
-          <img
-            src="../../images/parapente-06.jpg"
-            alt="Fotografía de parepente"
-          />
-          <label for="i4" class="pre"></label>
-          <label for="i1" class="next"></label>
-        </div>
-
-        <div class="nav_dots">
-          <label class="dots" id="dot1" for="i1"></label>
-          <label class="dots" id="dot2" for="i2"></label>
-          <label class="dots" id="dot3" for="i3"></label>
-          <label class="dots" id="dot4" for="i4"></label>
-          <label class="dots" id="dot5" for="i5"></label>
-        </div>
+<section class="gallery">
+  <div class="container-lg">
+    <div class="row gy-4 row-cols-1 row-cols-sm-2 row-cols-md-3">
+      <div class="col margin-img">
+        <img src="../../images/parapente-01.jpg" class="gallery-item" alt="">
       </div>
+
+      <div class="col margin-img">
+        <img src="../../images/parapente-02.jpg" class="gallery-item" alt="">
+      </div>
+
+      <div class="col margin-img">
+        <img src="../../images/parapente-03.jpg" class="gallery-item" alt="">
+      </div>
+
+      <div class="col margin-img">
+        <img src="../../images/parapente-04.jpg" class="gallery-item" alt="">
+      </div>
+
+      <div class="col margin-img">
+        <img src="../../images/parapente-05.jpg" class="gallery-item" alt="">
+      </div>
+
+      <div class="col margin-img">
+        <img src="../../images/parapente-06.jpg" class="gallery-item" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="gallery-popup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Parapente</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="../../images/parapente-01.jpg" class="modal-img" alt="Parapente con fondo de montañas al atardecer">
+        Foto: Julio Cisterna
+      </div>
+    </div>
+  </div>
+</div>
 
       <div class="grid-cont">
         <div>
@@ -280,10 +268,25 @@
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
       crossorigin="anonymous"
     ></script>
+
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-      crossorigin="anonymous"
-    ></script>
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"
+  ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script type="text/javascript">
+      document.addEventListener("click",function (e){
+        if(e.target.classList.contains("gallery-item")){
+            const src = e.target.getAttribute("src");
+            document.querySelector(".modal-img").src = src;
+            const myModal = new bootstrap.Modal(document.getElementById('gallery-popup'));
+            myModal.show();
+        }
+      })
+    </script>
+   
   </body>
 </html>

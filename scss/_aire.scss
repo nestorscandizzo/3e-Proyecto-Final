@@ -3,8 +3,12 @@ $color-green: #002116ff;
 $color-rusted: #902923ff;
 $color-cream: #eef4edff;
 $color-gold: #d1ac00ff;
-$color-turquoise: #109194ff;
 $color-paragraph: rgb(216, 216, 216);
+
+.nav-padding {
+  padding-left: 1rem;
+  padding-right: 1.5rem;
+}
 
 .subtitulo {
   font-size: 1.5rem;
@@ -13,92 +17,21 @@ $color-paragraph: rgb(216, 216, 216);
 }
 
 /* --- GALLERY --- */
-.gallery {
-  width: min(90%, 70.5rem);
-  height: 0;
-  margin: 0 auto;
-  margin-top: 10vh;
-  position: relative;
-  padding-bottom: 40%;
-  background: $color-gold;
-  border: solid 0.5rem $color-cream;
-  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.9);
-}
-
-.slide_img {
-  position: absolute;
+.gallery img {
+  max-width: 100%;
+  background-color: $color-cream;
+  padding: 8px;
   width: 100%;
-  height: 100%;
-  z-index: 0;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
-#i1,
-#i2,
-#i3,
-#i4,
-#i5 {
-  display: none;
-}
-
-.pre,
-.next {
-  width: 12%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  background: rgba(00, 00, 00, 0.4);
-  z-index: 99;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.9);
   cursor: pointer;
 }
 
-.pre {
-  left: 0;
+.margin-img {
+  margin-top: 30px;
 }
 
-.next {
-  right: 0;
-}
-
-.nav_dots {
+#gallery-popup .modal-img {
   width: 100%;
-  height: 11px;
-  bottom: 12%;
-  position: absolute;
-  text-align: center;
-  z-index: 99;
-}
-
-.dots {
-  top: -5px;
-  width: 18px;
-  height: 18px;
-  margin: 0 4px;
-  position: relative;
-  border-radius: 50%;
-  display: inline-block;
-  background: rgba(00, 00, 00, 0.6);
-}
-
-#i1:checked ~ #one,
-#i2:checked ~ #two,
-#i3:checked ~ #three,
-#i4:checked ~ #four,
-#i5:checked ~ #five {
-  z-index: 9;
-}
-
-#i1:checked ~ .nav_dots #dot1,
-#i2:checked ~ .nav_dots #dot2,
-#i3:checked ~ .nav_dots #dot3,
-#i4:checked ~ .nav_dots #dot4,
-#i5:checked ~ .nav_dots #dot5 {
-  background: #fff;
 }
 
 /* --- GRID --- */
@@ -106,7 +39,7 @@ $color-paragraph: rgb(216, 216, 216);
   margin-inline: auto;
   width: min(90%, 70.5rem);
   height: auto;
-  margin-top: 10vh;
+  margin-top: 5vh;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
